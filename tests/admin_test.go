@@ -68,6 +68,10 @@ var _ = Describe("Admin", Ordered, func() {
 		Expect(client.Info(ctx).Val()).NotTo(Equal("FooBar"))
 	})
 
+	It("Cmd Shutdown", func() {
+		Expect(client.Shutdown(ctx).Err()).NotTo(HaveOccurred())
+	})
+
 	It("Cmd Select", func() {
 		var outRangeNumber = 100
 
