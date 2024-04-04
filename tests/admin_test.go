@@ -70,6 +70,22 @@ var _ = Describe("Admin", Ordered, func() {
 
 	It("Cmd Shutdown", func() {
 		Expect(client.Shutdown(ctx).Err()).NotTo(HaveOccurred())
+
+		// PikiwiDB does not support the Ping command right now
+		// wait for 5 seconds and then ping server
+		// time.Sleep(5 * time.Second)
+		// Expect(client.Ping(ctx).Err()).To(HaveOccurred())
+
+		// restart server
+		config := util.GetConfPath(false, 0)
+		s = util.StartServer(config, map[string]string{"port": strconv.Itoa(7777)}, true)
+		Expect(s).NotTo(Equal(nil))
+
+		// PikiwiDB does not support the Ping command right now
+		// wait for 5 seconds and then ping server
+		// time.Sleep(5 * time.Second)
+		// client = s.NewClient()
+		// Expect(client.Ping(ctx).Err()).NotTo(HaveOccurred())
 	})
 
 	It("Cmd Select", func() {
