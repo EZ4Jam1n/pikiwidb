@@ -47,6 +47,9 @@ void CmdTableManager::InitCmdTable() {
   // keyspace
   ADD_COMMAND(Del, -2);
   ADD_COMMAND(Exists, -2);
+  ADD_COMMAND(Type, 2);
+  ADD_COMMAND(Expire, 3);
+  ADD_COMMAND(Ttl, 2);
   ADD_COMMAND(PExpire, 3);
   ADD_COMMAND(Expireat, 3);
   ADD_COMMAND(PExpireat, 3);
@@ -76,6 +79,7 @@ void CmdTableManager::InitCmdTable() {
   ADD_COMMAND(SetRange, 4);
   ADD_COMMAND(Decr, 2);
   ADD_COMMAND(SetBit, 4);
+  ADD_COMMAND(MSetnx, -3);
 
   // hash
   ADD_COMMAND(HSet, -4);
@@ -110,6 +114,7 @@ void CmdTableManager::InitCmdTable() {
   ADD_COMMAND(SMembers, 2);
   ADD_COMMAND(SDiff, -2);
   ADD_COMMAND(SDiffstore, -3);
+  ADD_COMMAND(SScan, -3);
 
   // list
   ADD_COMMAND(LPush, -3);

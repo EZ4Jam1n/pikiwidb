@@ -25,6 +25,9 @@ namespace pikiwidb {
 // key cmd
 const std::string kCmdNameDel = "del";
 const std::string kCmdNameExists = "exists";
+const std::string kCmdNameType = "type";
+const std::string kCmdNameExpire = "expire";
+const std::string kCmdNameTtl = "ttl";
 const std::string kCmdNamePExpire = "pexpire";
 const std::string kCmdNameExpireat = "expireat";
 const std::string kCmdNamePExpireat = "pexpireat";
@@ -54,6 +57,7 @@ const std::string kCmdNameGetRange = "getrange";
 const std::string kCmdNameSetRange = "setrange";
 const std::string kCmdNameDecr = "decr";
 const std::string kCmdNameIncr = "incr";
+const std::string kCmdNameMSetnx = "msetnx";
 
 // multi
 const std::string kCmdNameMulti = "multi";
@@ -103,6 +107,7 @@ const std::string kCmdNameSPop = "spop";
 const std::string kCmdNameSMembers = "smembers";
 const std::string kCmdNameSDiff = "sdiff";
 const std::string kCmdNameSDiffstore = "sdiffstore";
+const std::string kCmdNameSScan = "sscan";
 
 // list cmd
 const std::string kCmdNameLPush = "lpush";
